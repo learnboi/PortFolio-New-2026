@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Louize';
+  src: url('../fonts/Louize.woff') format('woff'),
+       url('../fonts/Louize.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,12 +43,18 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global heading styles with Louize font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Louize', 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
 }
 
 .container {
@@ -49,8 +64,9 @@ body {
 }
 
 .section-title {
+  font-family: 'Louize', 'Open Sans', Arial, sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 3rem;
   color: var(--text-primary);

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaGithub, FaCode, FaStar, FaCodeBranch, FaCalendarAlt, FaFire, FaTrophy } from 'react-icons/fa';
+import { FaGithub, FaCode, FaStar, FaCodeBranch, FaFire, FaTrophy } from 'react-icons/fa';
 import './GithubStats.css';
 
 const GithubStats = () => {

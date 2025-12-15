@@ -100,7 +100,8 @@
 }
 
 .brand-name {
-  font-weight: 700;
+  font-family: 'Louize', 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
   font-size: 1.25rem;
   color: var(--text-primary);
   line-height: 1.2;

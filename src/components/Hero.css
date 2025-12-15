@@ -41,8 +41,9 @@
 }
 
 .hero-name {
+  font-family: 'Louize', 'Open Sans', Arial, sans-serif;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
