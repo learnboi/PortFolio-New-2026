@@ -267,8 +267,13 @@
   }
 
   .logo {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
   }
 
   .logo-text {
@@ -282,8 +287,13 @@
   }
 
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-image {
+    width: 35px;
+    height: 35px;
   }
 }
 
