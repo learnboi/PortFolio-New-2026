@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website showcasing your skills, projects, and experience as a software developer.",
+  "private": true,
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "framer-motion": "^10.16.4",
+    "react": "^18.2.0",
+    "react-countup": "^6.5.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-particles": "^2.12.2",
+    "react-scripts": "5.0.1",
+    "tsparticles": "^2.12.0",
+    "tsparticles-slim": "^2.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
