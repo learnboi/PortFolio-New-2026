@@ -399,7 +399,7 @@ PortFolio-New-2026/
    - Nagpur, Maharashtra, India
 
 4. **Portfolio**
-   - chaitanyacodes.online
+   - devchaitanya.online
    - External link
 
 **Social Links:**
@@ -863,7 +863,7 @@ vercel --prod
 **Email:** contact.devchaitanya@gmail.com  
 **Phone:** +91 8605839309  
 **Location:** Nagpur, Maharashtra, India  
-**Portfolio:** chaitanyacodes.online  
+**Portfolio:** devchaitanya.online  
 **GitHub:** https://github.com/learnboi  
 **LinkedIn:** https://linkedin.com/in/chaitanya-gayakwad-8ba009208/
 

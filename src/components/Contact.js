@@ -34,8 +34,8 @@ const Contact = () => {
     {
       icon: FaGlobe,
       title: 'Portfolio',
-      value: 'chaitanyacodes.online',
-      href: 'https://chaitanyacodes.online',
+      value: 'devchaitanya.online',
+      href: 'https://devchaitanya.online',
       color: '#8b5cf6',
     },
   ];

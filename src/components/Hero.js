@@ -35,7 +35,7 @@ const Hero = () => {
     { icon: FaGithub, href: 'https://github.com/learnboi', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com/in/chaitanya-gayakwad-8ba009208/', label: 'LinkedIn' },
     { icon: FaEnvelope, href: 'mailto:contact.devchaitanya@gmail.com', label: 'Email' },
-    { icon: FaGlobe, href: 'https://chaitanyacodes.online', label: 'Portfolio' },
+    { icon: FaGlobe, href: 'https://devchaitanya.online', label: 'Portfolio' },
   ];
 
   return (
