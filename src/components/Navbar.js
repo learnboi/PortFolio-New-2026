@@ -53,8 +53,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="/images/profile-hero.jpg"
-              alt="Chaitanya Gayakwad"
+              src="/logo.png"
+              alt="CG Logo"
               className="logo-image"
               onError={(e) => {
                 e.target.style.display = 'none';
