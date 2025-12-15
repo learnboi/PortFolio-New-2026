@@ -49,8 +49,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         >
           <motion.div
             className="logo"
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
           >
             <img
               src="/logo.png"
@@ -65,7 +63,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <div className="logo-fallback" style={{ display: 'none' }}>
               <span className="logo-text">CG</span>
             </div>
-            <div className="logo-glow"></div>
           </motion.div>
           <div className="brand-name-container">
             <span className="brand-name">Chaitanya Gayakwad</span>
