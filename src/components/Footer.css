@@ -15,4 +15,32 @@
   opacity: 0.7;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .footer-note {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.25rem 0;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+  }
+}
+
 

@@ -2,16 +2,33 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaGithub, FaCode, FaStar, FaCodeBranch, FaFire, FaTrophy } from 'react-icons/fa';
+import { FaGithub, FaCode, FaStar, FaCodeBranch, FaFire, FaTrophy, FaSpinner } from 'react-icons/fa';
 import './GithubStats.css';
 
 const GithubStats = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [graphTheme, setGraphTheme] = useState('react-dark');
+  const [imageErrors, setImageErrors] = useState({
+    streak: false,
+    activity: false,
+  });
+  const [imageLoading, setImageLoading] = useState({
+    streak: true,
+    activity: true,
+  });
 
   const githubUsername = 'learnboi';
   const githubUrl = `https://github.com/${githubUsername}`;
+
+  const handleImageLoad = (type) => {
+    setImageLoading((prev) => ({ ...prev, [type]: false }));
+  };
+
+  const handleImageError = (type) => {
+    setImageLoading((prev) => ({ ...prev, [type]: false }));
+    setImageErrors((prev) => ({ ...prev, [type]: true }));
+  };
 
   const themes = [
     { name: 'React Dark', value: 'react-dark' },
@@ -83,12 +100,30 @@ const GithubStats = () => {
                 transition={{ duration: 0.5 }}
                 className="graph-wrapper"
               >
-                <img
-                  src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=${graphTheme}&area=true&hide_border=false&bg_color=transparent&color=6366f1&line=8b5cf6&point=ffffff&radius=8&custom_title=My%20GitHub%20Contributions`}
-                  alt="GitHub Activity Graph"
-                  className="activity-graph-enhanced"
-                  loading="lazy"
-                />
+                {imageLoading.activity && (
+                  <div className="image-loading">
+                    <FaSpinner className="spinner" />
+                    <p>Loading activity graph...</p>
+                  </div>
+                )}
+                {imageErrors.activity ? (
+                  <div className="image-error">
+                    <FaGithub />
+                    <p>Unable to load activity graph</p>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="error-link">
+                      View on GitHub
+                    </a>
+                  </div>
+                ) : (
+                  <img
+                    src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=${graphTheme}&area=true&hide_border=true&bg_color=0D1117&color=6366f1&line=8b5cf6&point=ffffff&radius=8`}
+                    alt="GitHub Activity Graph"
+                    className="activity-graph-enhanced"
+                    loading="lazy"
+                    onLoad={() => handleImageLoad('activity')}
+                    onError={() => handleImageError('activity')}
+                  />
+                )}
               </motion.div>
             </div>
 
@@ -111,58 +146,6 @@ const GithubStats = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="stat-card-large"
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="stat-card-header">
-                <div className="stat-icon-large">
-                  <FaCode />
-                </div>
-                <div>
-                  <h4>GitHub Statistics</h4>
-                  <p>Overall performance metrics</p>
-                </div>
-              </div>
-              <div className="stat-image-container">
-                <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=${graphTheme}&hide_border=false&bg_color=transparent&title_color=6366f1&icon_color=8b5cf6&text_color=ffffff&border_color=6366f1&include_all_commits=true&count_private=true`}
-                  alt="GitHub Stats"
-                  className="github-stats-img"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="stat-card-large"
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <div className="stat-card-header">
-                <div className="stat-icon-large">
-                  <FaCodeBranch />
-                </div>
-                <div>
-                  <h4>Top Languages</h4>
-                  <p>Most used programming languages</p>
-                </div>
-              </div>
-              <div className="stat-image-container">
-                <img
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&theme=${graphTheme}&hide_border=false&bg_color=transparent&title_color=6366f1&text_color=ffffff&border_color=6366f1&langs_count=8`}
-                  alt="Top Languages"
-                  className="github-stats-img"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 1, duration: 0.6 }}
               className="stat-card-large streak-card"
               whileHover={{ y: -10, scale: 1.02 }}
@@ -177,12 +160,30 @@ const GithubStats = () => {
                 </div>
               </div>
               <div className="stat-image-container">
-                <img
-                  src={`https://github-readme-streak-stats.demolab.com/?user=${githubUsername}&theme=${graphTheme}&hide_border=false&background=transparent&border=6366f1&ring=8b5cf6&fire=ffd700&currStreakLabel=6366f1`}
-                  alt="GitHub Streak"
-                  className="github-stats-img"
-                  loading="lazy"
-                />
+                {imageLoading.streak && (
+                  <div className="image-loading">
+                    <FaSpinner className="spinner" />
+                    <p>Loading streak...</p>
+                  </div>
+                )}
+                {imageErrors.streak ? (
+                  <div className="image-error">
+                    <FaFire />
+                    <p>Unable to load streak</p>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="error-link">
+                      View on GitHub
+                    </a>
+                  </div>
+                ) : (
+                  <img
+                    src={`https://streak-stats.demolab.com/?user=${githubUsername}&theme=${graphTheme}&hide_border=true&background=0D1117&border=6366f1&ring=8b5cf6&fire=ffd700&currStreakLabel=6366f1`}
+                    alt="GitHub Streak"
+                    className="github-stats-img"
+                    loading="lazy"
+                    onLoad={() => handleImageLoad('streak')}
+                    onError={() => handleImageError('streak')}
+                  />
+                )}
               </div>
             </motion.div>
           </div>
@@ -202,7 +203,7 @@ const GithubStats = () => {
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <FaCode />
-              <span>21 Repositories</span>
+              <span>22 Repositories</span>
             </motion.a>
             <motion.a
               href={`${githubUrl}?tab=stars`}

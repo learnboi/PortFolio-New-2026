@@ -16,17 +16,24 @@ import ParticleBackground from './components/ParticleBackground';
 import './styles/App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Default to dark mode
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Apply dark mode immediately on load
+    document.documentElement.classList.add('dark-mode');
+    
     // Simulate loading
     setTimeout(() => setLoading(false), 1000);
     
-    // Check for saved theme preference
+    // Check for saved theme preference, default to dark mode if not set
     const savedTheme = localStorage.getItem('darkMode');
-    if (savedTheme) {
+    if (savedTheme !== null) {
       setDarkMode(savedTheme === 'true');
+    } else {
+      // If no saved preference, default to dark mode
+      setDarkMode(true);
+      localStorage.setItem('darkMode', 'true');
     }
   }, []);
 

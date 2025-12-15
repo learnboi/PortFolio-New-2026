@@ -41,9 +41,9 @@
 }
 
 .hero-name {
-  font-family: 'Louize', 'Open Sans', Arial, sans-serif;
+  font-family: 'Louize', 'Playfair Display', 'Georgia', serif;
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
@@ -236,21 +236,44 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px;
+    min-height: auto;
+  }
+
+  .hero-container {
+    padding: 0 15px;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-greeting {
+    font-size: 1rem;
   }
 
   .hero-name {
     font-size: 2.5rem;
+    line-height: 1.1;
   }
 
   .hero-title {
     font-size: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 10px;
   }
 
   .hero-image {
     margin-top: 2rem;
+    justify-content: center;
   }
 
   .profile-image-container {
@@ -260,11 +283,60 @@
 
   .hero-buttons {
     justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 2rem;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .hero-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 0 50px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .profile-image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-buttons {
+    max-width: 100%;
   }
 }
 

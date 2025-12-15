@@ -74,4 +74,45 @@
   opacity: 0.3;
 }
 
+@media (max-width: 768px) {
+  .certifications {
+    padding: 60px 0;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cert-card {
+    padding: 1.5rem;
+  }
+
+  .cert-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications {
+    padding: 50px 0;
+  }
+
+  .cert-card {
+    padding: 1.25rem;
+  }
+
+  .cert-icon {
+    font-size: 2rem;
+  }
+
+  .cert-card h4 {
+    font-size: 1rem;
+  }
+
+  .cert-card p {
+    font-size: 0.85rem;
+  }
+}
+
 

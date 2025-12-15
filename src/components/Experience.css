@@ -100,19 +100,70 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 60px 0;
+  }
+
   .timeline {
     padding-left: 1.5rem;
+    max-width: 100%;
+  }
+
+  .timeline::before {
+    left: 8px;
   }
 
   .timeline-marker {
     left: -1.5rem;
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    border-width: 3px;
   }
 
   .timeline-content {
     margin-left: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 50px 0;
+  }
+
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-marker {
+    left: -1.25rem;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+    margin-left: 0.25rem;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
   }
 }
 

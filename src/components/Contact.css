@@ -104,4 +104,70 @@
   color: var(--primary-color);
 }
 
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    padding: 1.25rem;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .contact-social {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .social-link {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 50px 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+
+  .social-link {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
 
