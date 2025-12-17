@@ -199,6 +199,6 @@ This project is open source and available for personal use.
 
 ---
 
-**Built with ❤️ for Chaitanya Gayakwad**
+**Built with ❤️ for Chaitanya Gayakwad and Haven**
 
 *Showcasing modern React development skills to impress recruiters!*
